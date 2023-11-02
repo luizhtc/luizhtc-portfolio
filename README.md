@@ -7,11 +7,11 @@ I currently work as a Data Engineer, and I try to follow the open-source scene i
 ### python_studies
  - Some of the codes I wrote for my lessons and classes in UFABC (Universidade Federal do ABC).
 
-### php_usd_currency_converter
+### usd_currency_converter
   - A USD to any currency converter I wrote in PHP, that checks the ECB website.
 
-### python_yahoo_scraping
+### yahoo_scraping
   - A webscraping script using Selenium webdriver that checks and writes a .csv file containing the last 5 BTC-EUR rates
 
-### sql_teradata_studies
+### sql_studies
   - Some SQL queries I used while was at training for a company I worked
