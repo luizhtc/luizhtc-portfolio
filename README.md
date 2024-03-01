@@ -1,4 +1,4 @@
-# LiL - Portfolio
+# Welcome!
 
 This repo contains my projects and studies, each folder is a different project, you can find project info in the readme.md file in each folder.
 I currently work as a Data Engineer, and I try to follow the open-source scene in this area.
