@@ -1,3 +1,4 @@
+using System.Data.SQLite;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using product_registry.Models;
@@ -15,6 +16,30 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+
+        string DbPath = "Data Source=products.db";
+        
+        using(var conn = new SQLiteConnection(DbPath)) 
+        {
+            conn.Open();
+
+            var tableCmd = conn.CreateCommand();
+            tableCmd.CommandText = "CREATE TABLE product(Id, Teste)";
+            tableCmd.ExecuteNonQuery();
+
+            var selectCmd = conn.CreateCommand();
+            selectCmd.CommandText = "SELECT * FROM product";
+
+            using(var reader = selectCmd.ExecuteReader()) 
+            {
+                while(reader.Read()) 
+                {
+                    var result = reader.GetString(0);
+                    Console.WriteLine(result);
+                }
+            } 
+        };
+
         IList<ProductModel> products =
         [
             new ProductModel {
