@@ -1,0 +1,39 @@
+@model product_registry.Models.ProductModel
+@{
+    ViewData["Title"] = "New Product";
+}
+
+<body>
+    <h1>Registering new product</h1>
+
+    <form asp-action="Register" asp-controller="Product" method="post">
+        <div class="form-horizontal">
+            <hr />
+
+        @if (!Html.ViewData.ModelState.IsValid)
+        {
+            <div asp-validation-summary="All" class="alert alert-danger"></div>
+        }
+
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control col-md-4" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Price" class="control-label"></label>
+            <input asp-for="Price" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="reset" value="Reset" class="btn btn-default" />
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+            <hr />
+        </div>
+    </form>
+</body>

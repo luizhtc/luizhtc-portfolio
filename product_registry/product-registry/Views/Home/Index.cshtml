@@ -1,42 +1,7 @@
-﻿@model IEnumerable<product_registry.Models.ProductModel>
-@{
-    ViewData["Title"] = "Product List";
+﻿@{
+    ViewData["Title"] = "Welcome";
 }
 
 <body>
-    <h1>Product List</h1>
-    <table class="table" border="1">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Description</th>
-            <th>Registry Date</th>
-            <th>Useable</th>
-        </tr>
-
-        @foreach (var product in Model)
-        {
-            <tr>
-                <td>
-                    <label>@product.Id</label>
-                </td>
-                <td>
-                    <label>@product.Name</label>
-                </td>
-                <td>
-                    <label>@product.Price</label>
-                </td>
-                <td>
-                    <label>@product.Description</label>
-                </td>
-                <td>
-                    <label>@product.RegistryDate</label>
-                </td>
-                <td>
-                    <label>@product.Useable</label>
-                </td>
-            </tr>
-        }
-    </table>
+    <h1>Welcome!</h1>
 </body>
