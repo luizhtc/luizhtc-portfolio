@@ -56,6 +56,13 @@ public class ProductController : Controller
     {
         if (ModelState.IsValid)
         {
+            @TempData["message"] = "Product successfully registered.";
+            @TempData["newProductId"] = productTeste.Id;
+            @TempData["newProductName"] = productTeste.Name;
+            @TempData["newProductPrice"] = productTeste.Price.ToString();
+            @TempData["newProductDescription"] = productTeste.Description;
+            @TempData["newProductUseable"] = productTeste.Useable.ToString();
+
             return RedirectToAction("Index", "Product");
         }
         else
