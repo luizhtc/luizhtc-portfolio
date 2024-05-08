@@ -1,5 +1,7 @@
 using System.Diagnostics;
+using Dapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.Sqlite;
 using product_registry.Models;
 
 namespace product_registry.Controllers;

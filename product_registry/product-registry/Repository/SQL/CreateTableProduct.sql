@@ -1,8 +1,4 @@
-CREATE DATABASE product_registry;
-
-USE product_registry;
-
-CREATE TABLE product (
+CREATE TABLE IF NOT EXISTS product (
     [ID] INT IDENTITY(1,1),
     [NAME] NVARCHAR(50) NOT NULL,
     [PRICE] DECIMAL(10,2) NOT NULL,
