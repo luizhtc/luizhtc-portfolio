@@ -22,8 +22,4 @@ public class ProductModel {
     
     [Required(ErrorMessage = "Useable flag is required.")]
     public bool Useable { get; set; }
-
-    // [Required(ErrorMessage = "Product Type is required.")]
-    [Display(Name = "Product Type")]
-    public ProductTypeModel productType { get; set; }
 }

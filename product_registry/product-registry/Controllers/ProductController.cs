@@ -15,35 +15,7 @@ public class ProductController : Controller
 
     public IActionResult Index()
     {
-        IList<ProductModel> products =
-        [
-            new ProductModel {
-                Id = 1,
-                Name = "Product 1",
-                Price = 2.5,
-                Description = "This is Product 1",
-                RegistryDate = DateTime.UtcNow,
-                Useable = true
-            },
-            new ProductModel {
-                Id = 2,
-                Name = "Product 2",
-                Price = 3,
-                Description = "This is Product 2",
-                RegistryDate = DateTime.UtcNow,
-                Useable = true
-            },
-            new ProductModel {
-                Id = 3,
-                Name = "Product 3",
-                Price = 4.76,
-                Description = "This is Product 3",
-                RegistryDate = DateTime.UtcNow,
-                Useable = true
-            }
-        ];
-
-        return View(products);
+        return View();
     }
 
     public IActionResult Register()
@@ -52,22 +24,15 @@ public class ProductController : Controller
     }
 
     [HttpPost]
-    public IActionResult Register(ProductModel productTeste)
+    public IActionResult Register(ProductModel newProduct)
     {
         if (ModelState.IsValid)
         {
-            @TempData["message"] = "Product successfully registered.";
-            @TempData["newProductId"] = productTeste.Id;
-            @TempData["newProductName"] = productTeste.Name;
-            @TempData["newProductPrice"] = productTeste.Price.ToString();
-            @TempData["newProductDescription"] = productTeste.Description;
-            @TempData["newProductUseable"] = productTeste.Useable.ToString();
-
             return RedirectToAction("Index", "Product");
         }
         else
         {
-            return View(productTeste);
+            return View(newProduct);
         }
     }
     
