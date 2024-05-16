@@ -1,0 +1,53 @@
+@model IEnumerable<product_registry.Models.ProductModel>
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<body>
+    <h1>Product List</h1>
+    <a asp-action="Create" asp-controller="Product">Create new table</a>
+    <a asp-action="Register" asp-controller="Product">Register new product</a>
+
+
+    @if (@TempData["message"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["message"]
+        </div>
+    }
+
+    <table class="table" border="1">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Registry Date</th>
+            <th>Useable</th>
+        </tr>
+
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>
+                    <label>@product.Id</label>
+                </td>
+                <td>
+                    <label>@product.Name</label>
+                </td>
+                <td>
+                    <label>@product.Price</label>
+                </td>
+                <td>
+                    <label>@product.Description</label>
+                </td>
+                <td>
+                    <label>@product.RegistryDate</label>
+                </td>
+                <td>
+                    <label>@product.Useable</label>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
