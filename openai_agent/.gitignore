@@ -1,0 +1,5 @@
+# VENV
+openai-agent-env/
+
+# dotenv
+*.env
