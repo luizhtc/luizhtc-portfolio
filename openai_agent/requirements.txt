@@ -1,8 +1,4 @@
 llama-index==0.10.37
 llama-index-core==0.10.37
 python-dotenv==1.0.1
-
-## %pip install llama-index-readers-file
-## %pip install llama-index-embeddings-openai
-## %pip install llama-index-agent-openai
-## %pip install llama-index-llms-openai
+pypdf==4.2.0
