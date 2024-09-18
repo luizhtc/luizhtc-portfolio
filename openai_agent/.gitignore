@@ -1,0 +1,14 @@
+# VENV
+openai-agent-env/
+
+# dotenv
+.env
+
+# data
+.data/
+
+# pycache
+__pycache__/
+
+# vector store name
+daft_punk/
