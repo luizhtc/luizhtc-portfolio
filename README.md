@@ -8,8 +8,10 @@ You can find me here on LinkedIn https://www.linkedin.com/in/luiz-henrique-trinc
  - This repo has the labs and studies that I used to complete a full AI/ML Udemy course. Started in 2024 and ended 2025
  - https://github.com/luizhtc/aiml-learning
 
-### cs50x-cs50ai
+### cs50x-cs50ai (Private)
  - My studies and problem set resolutions from the CS50x and CS50ai courses I took at edX.
+ - This repository is private to comply with the course guidelines.
+ - If you'd like to discuss anything related, feel free to reach out!
  - https://github.com/luizhtc/cs50x-cs50ai
 
 ### Ready- (Archived)
